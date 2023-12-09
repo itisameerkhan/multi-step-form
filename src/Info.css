@@ -1,0 +1,107 @@
+.info-container 
+{
+    /* border:2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.info-container h1 
+{
+    font-family: 'ubuntu-bold';
+    color:#02295A;
+}
+.info-container p
+{
+    font-family: 'ubuntu-regular';
+    color:#02295A;
+    opacity: 0.5;
+}
+.input-label 
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 10px;
+}
+.input-label label 
+{
+    font-family: 'ubuntu-medium';
+    color: #02295A;
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+}
+.input-label .valid-input 
+{
+    padding: 13px 10px;
+    width: 90%;
+    outline: none;
+    border: 1px solid #D6D9E6;
+    color:black;
+    transition: all 100ms ease-in-out;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'ubuntu-medium';
+}
+.input-label .invalid-input 
+{
+    padding: 13px 10px;
+    width: 90%;
+    outline: none;
+    border: 1px solid red;
+    color:black;
+    transition: all 100ms ease-in-out;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'ubuntu-medium';
+}
+.input-label input:focus 
+{
+    border:1px solid hsl(243, 100%, 62%);
+}
+.btn-container 
+{
+    display: flex;
+    justify-content: end;
+    width: 95%;
+}
+.next-step-btn 
+{
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #02295A;
+    color:white;
+    font-family: 'ubuntu-regular';
+    font-size: 18px;
+    transition: all 100ms ease-in-out;
+}
+.next-step-btn:hover
+{
+    background-color: #184e90;
+}
+.valid-span 
+{
+    color:red;
+    font-size: 15px;
+    font-family: 'ubuntu-regular';
+}
+.invalid-span 
+{
+    display: none;
+    color:red;
+}
+.input-label .invalid-input:focus 
+{
+    border: 1px solid red;
+}
+.link-btn 
+{
+    text-decoration: none;
+    color:white;
+    width: 95%;
+    display: flex;
+    justify-content: end;
+}
