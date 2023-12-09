@@ -1,4 +1,8 @@
 import './App.css';
+import Info from './Info';
+import Plan from './Plan';
+import Addons from './Addons';
+import Summary from './Summary'
 import './assets/images/bg-sidebar-desktop.svg'
 import { NavLink } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -39,9 +43,14 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="form-right">
-            
-          </div>
+            <div className="form-right">
+              <Routes>
+                  <Route path='/' element={<Info />}/>
+                  <Route path='/select-plan' element={<Plan  />} />
+                  <Route path='/add-ons' element={<Addons />} />
+                  <Route path='/summary' element={<Summary />} />
+              </Routes>
+            </div>
         </div>
       </div>
     </BrowserRouter>
