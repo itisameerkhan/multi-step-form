@@ -1,34 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import './assets/images/bg-sidebar-desktop.svg'
+import { NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <div className="App">
+        <div className="form-div">
+          <div className="form-left">
+            <div className="form-left-inner">
+              <NavLink to='/' className={'nav-link'}>1</NavLink>
+              <div className="form-left-inner-desc">
+                <p>STEP 1</p>
+                <h3>YOUR INFO</h3>
+              </div>
+            </div>
+            <div className="form-left-inner">
+            <NavLink to='/select-plan' className={'nav-link'}>2</NavLink>
+              <div className="form-left-inner-desc">
+                <p>STEP 2</p>
+                <h3>SELECT PLAN</h3>
+              </div>
+            </div>
+            <div className="form-left-inner">
+            <NavLink to='/add-ons' className={'nav-link'}>3</NavLink>
+              <div className="form-left-inner-desc">
+                <p>STEP 3</p>
+                <h3>ADD-ONS</h3>
+              </div>
+            </div>
+            <div className="form-left-inner">
+            <NavLink to='/summary' className={'nav-link'}>4</NavLink>
+              <div className="form-left-inner-desc">
+                <p>STEP 4</p>
+                <h3>SUMMARY</h3>
+              </div>
+            </div>
+          </div>
+          <div className="form-right">
+            
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </BrowserRouter>
   )
 }
 
