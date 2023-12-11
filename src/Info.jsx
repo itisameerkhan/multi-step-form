@@ -6,7 +6,7 @@ const Info = () => {
 
     const [name, setName] = useState('nothingg');
     const [email, setEmail] = useState('nothing123@gmail.com');
-    const [number, setNumber] = useState("6969696969");
+    const [number, setNumber] = useState("xxxxxxxxxx");
 
     const verifyName = () => { return name.length > 3; }
     const verifyNumber = () => { return (number.length == 10); }
@@ -42,7 +42,6 @@ const Info = () => {
                         placeholder='e.g. Stephen King'
                         onChange={(e) => setName(e.target.value)}
                         className={verifyName() ? 'valid-input' : 'invalid-input'}
-                        value={name}
                     />
                 </div>
                 <div className="input-label">
@@ -74,7 +73,6 @@ const Info = () => {
                         placeholder='e.g. +1 234 567 890'
                         onChange={(e) => setNumber(e.target.value)}
                         className={verifyNumber() ? 'valid-input' : 'invalid-input'}
-                        // value={number}
                     />
                 </div>
             </div>
@@ -87,7 +85,7 @@ const Info = () => {
                     if(verifyForm() == false) {
                         if(name == 'nothingg') setName('');
                         if(email == 'nothing123@gmail.com') setEmail('');
-                        if(number=='6969696969') setNumber('');
+                        if(number=='xxxxxxxxxx') setNumber('');
                     }
                 }}
             >
