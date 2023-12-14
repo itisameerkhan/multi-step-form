@@ -4,22 +4,23 @@ import { Link } from 'react-router-dom';
 
 const Info = () => {
 
-    const [name, setName] = useState('nothingg');
-    const [email, setEmail] = useState('nothing123@gmail.com');
-    const [number, setNumber] = useState("xxxxxxxxxx");
+    const [name, setName] = useState(localStorage.getItem('name'));
+    const [email, setEmail] = useState(localStorage.getItem('email'));
+    const [number, setNumber] = useState(localStorage.getItem('number'));
 
-    const verifyName = () => { return name.length > 3; }
-    const verifyNumber = () => { return (number.length == 10); }
+    const [nameClass, setNameClass] = useState('valid-input');
+    const [emailClass, setEmailClass] = useState('valid-input');
+    const [phoneClass, setPhoneClass] = useState('valid-input');
+
+    const verifyName = () => { return name !== null && name.length != 0; }
     const verifyEmail = () => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
-    const validateName = () => {
-        if(name.length == 0) return 'This field is required'
-        if(name.length < 3) return 'Minimum 3 characters required';
-    }
-    const verifyForm = () => {
-        return verifyName() && name != 'nothingg' && verifyEmail() && email != 'nothing123@gmail.com' && verifyNumber() && number != '6969696969'
+    const verfiyNumber = () => { return number != null && number.length == 10};
+
+    const validateForm = () => {
+        return verifyName() && verfiyNumber() && verifyEmail();
     }
 
     return (
@@ -33,22 +34,26 @@ const Info = () => {
                     <label>
                         Name 
                         <span
-                            className={validateName() ? 'valid-span' : 'invalid-span'}>
-                            {validateName()}
+                            className={nameClass === 'valid-input' ? 'invalid-span' : 'valid-span'}>
+                            {'Invalid Name'}  
                         </span>
                     </label>
                     <input 
                         type="text" 
                         placeholder='e.g. Stephen King'
-                        onChange={(e) => setName(e.target.value)}
-                        className={verifyName() ? 'valid-input' : 'invalid-input'}
+                        onChange={(e) => {
+                            localStorage.setItem('name', e.target.value);
+                            setName(e.target.value);
+                        }}
+                        className={nameClass}
+                        value={name}
                     />
                 </div>
                 <div className="input-label">
                     <label>
                         Email Address
                         <span
-                            className={verifyEmail() ? 'invalid-span' : 'valid-span'}
+                            className={emailClass === 'valid-input' ? 'invalid-span' : 'valid-span'}
                             >
                             Invalid Email Address
                         </span>
@@ -56,37 +61,43 @@ const Info = () => {
                     <input 
                         type="email" 
                         placeholder='e.g. stephenking@lorem.com' 
-                        onChange={(e) => setEmail(e.target.value)}
-                        className={verifyEmail() ? 'valid-input' : 'invalid-input'}
+                        onChange={(e) => {
+                            setEmail(e.target.value)
+                            localStorage.setItem('email',e.target.value);
+                        }}
+                        className={emailClass}
+                        value={email}
                     />
                 </div>
                 <div className="input-label">
                     <label>
                         Phone Number
                         <span
-                            className={verifyNumber() ? 'invalid-span' : 'valid-span'}>
+                            className={phoneClass === 'valid-input' ? 'invalid-span' : 'valid-span'}>
                             Invalid phone number
                         </span>
                     </label>
                     <input 
                         type="text" 
                         placeholder='e.g. +1 234 567 890'
-                        onChange={(e) => setNumber(e.target.value)}
-                        className={verifyNumber() ? 'valid-input' : 'invalid-input'}
+                        onChange={(e) => {
+                            localStorage.setItem('number', e.target.value);
+                            setNumber(e.target.value)
+                        }}
+                        className={phoneClass}
+                        value={number}
                     />
                 </div>
             </div>
             <div className="btn-container">
-            <Link to={verifyForm() ? 'select-plan' : '/'} className='link-btn'>
+            <Link to={validateForm() ? 'select-plan' : '/'} className='link-btn'>
             <button 
                 type='submit'
                 className='next-step-btn'
                 onClick={() => {
-                    if(verifyForm() == false) {
-                        if(name == 'nothingg') setName('');
-                        if(email == 'nothing123@gmail.com') setEmail('');
-                        if(number=='xxxxxxxxxx') setNumber('');
-                    }
+                    setNameClass(verifyName() ? 'valid-input' : 'invalid-input')
+                    setEmailClass(verifyEmail() ? 'valid-input' : 'invalid-input')
+                    setPhoneClass(verfiyNumber() ? 'valid-input' : 'invalid-input');
                 }}
             >
                 Next Step
