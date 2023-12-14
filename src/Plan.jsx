@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './Plan.css';
 import Switch from './Component/Switch';
 import { Link } from 'react-router-dom';
+import './assets/images/icon-arcade.svg';
+import './assets/images/icon-advanced.svg';
+import './assets/images/icon-pro.svg';
 
 const Plan = () => {
 
@@ -34,7 +37,7 @@ const Plan = () => {
                 onClick={() => {
                     setOption(1); 
                     localStorage.setItem('option', 1);
-                }} >
+                }} >    
                     <img src="/src/assets/images/icon-arcade.svg" alt="" />
                     <div className="price">
                         <h4>Arcade</h4>
