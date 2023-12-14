@@ -1,19 +1,16 @@
 import { useState } from 'react';
 import './Switch.css';
 
-const Switch = () => {
-
-    const currentState = localStorage.getItem('clicked'); 
-    const [clicked, setClicked] = useState(currentState); 
+const Switch = ({price, setPrice}) => {
 
     return (
         <div 
             className={"switch"}
             onClick={() => {
-                localStorage.setItem('clicked',!clicked);
-                setClicked(!clicked);
+                localStorage.setItem('clicked',!price);
+                setPrice(!price);
             }}>
-            <div className={`button ${ currentState === 'true' ? 'clicked' : 'not-clicked'}`}></div>
+            <div className={`button ${ price === true ? 'clicked' : 'not-clicked'}`}></div>
         </div>
     )
 }

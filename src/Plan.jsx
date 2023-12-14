@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom';
 const Plan = () => {
 
     const [option, setOption] = useState(localStorage.getItem('option') || 1);
-    const [price, setPrice] = useState(localStorage.getItem('clicked'));
-
-    console.log('price -> ' + price);
+    const [price, setPrice] = useState(true);
 
     return (
         <div className="plan-container">
@@ -25,7 +23,8 @@ const Plan = () => {
                     <img src="/src/assets/images/icon-arcade.svg" alt="" />
                     <div className="price">
                         <h4>Arcade</h4>
-                        <p>{price === true ? '$9/mo' : '$90/year'}</p>
+                        <p>{price === true ? '$90/year' : '$9/mo'}</p>
+                        <h3 className={price ? 'price-p' : 'hide'}>2 months free</h3>
                     </div>
                 </div>
                 <div className={`options ${option == 2 ? 'options-select' : 'none'}`}
@@ -36,7 +35,8 @@ const Plan = () => {
                     <img src="/src/assets/images/icon-advanced.svg" alt="" />
                     <div className="price">
                         <h4>Advanced</h4>
-                        <p>$12/mo</p>
+                        <p>{price == true ? '$120/yr' : '$12/mo'}</p>
+                        <h3 className={price ? 'price-p' : 'hide'}>2 months free</h3>
                     </div>
                 </div>
                 <div className={`options ${option == 3 ? 'options-select' : 'none'}`}
@@ -47,13 +47,14 @@ const Plan = () => {
                     <img src="/src/assets/images/icon-pro.svg" alt="" />
                     <div className="price">
                         <h4>Pro</h4>
-                        <p>$15/mo</p>
+                        <p>{price ? '$150/yr' : '$15/mo'}</p>
+                        <h3 className={price ? 'price-p' : 'hide'}>2 months free</h3>
                     </div>
                 </div>
             </div>
             <div className="plan-switch">
                 <p>Monthly</p>
-                <Switch />
+                <Switch price={price} setPrice={setPrice} />
                 <p>Yearly</p>
             </div>
             <div className="plan-footer">

@@ -111,3 +111,16 @@
     text-decoration: none;
     color:gray;
 }
+.price-p 
+{
+    color:#02295A;
+    font-weight: 200;
+    padding:10px 0 0 0;
+    transition: 100ms ease-in-out;
+    margin: 0;
+    font-family: 'ubuntu-regular';
+}
+.hide 
+{
+    display: none;
+}
