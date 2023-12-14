@@ -1,0 +1,30 @@
+.switch
+{
+    height:30px;
+    width: 55px;
+    border-radius: 20px;
+    margin: 0 15px;
+    background-color: #02295A;
+    position: relative;
+    cursor: pointer;
+}
+.button 
+{
+    height: 20px;
+    width: 20px; 
+    left:5px;
+    top:50%;
+    transform: translate(0,-50%);
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    transition: all 100ms ease-in-out;
+}
+.clicked 
+{
+    left:30px;
+}
+.not-clicked 
+{
+    left:5px;
+}

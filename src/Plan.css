@@ -1,0 +1,113 @@
+.plan-container 
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 95%;
+}
+.title h1
+{
+    font-family: 'ubuntu-bold';
+    margin:20px 0 0 0;
+    padding:0;
+    color:#02295a;
+}
+.title p 
+{
+    padding:10px 0;
+    margin:0 0 15px 0;
+    color:gray;
+    font-family: 'ubuntu-regular';
+}
+.plan-options 
+{
+    display: flex;
+    gap: 20px;
+    padding:0 50px 0 0;
+    width: 100%;
+    margin: 30px 0;
+}
+.options 
+{
+    border:1px solid #CFCEFF;
+    width: 33%;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+.options img 
+{
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.price 
+{
+    padding:15px;
+}
+.price h4 
+{
+    font-family: 'ubuntu-medium';
+    padding:0;
+    margin:0;
+    color:#02295A;
+}
+.price p 
+{
+    font-family: 'ubuntu-regular';
+    color:gray;
+    padding:0;
+    margin:0;
+}
+
+.options:hover 
+{
+    border:1px solid #473DFF;
+}
+.options-select 
+{
+    border:1px solid #473DFF;
+    background-color: #F0F6FF;
+}
+.plan-switch 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    background-color: #F0F6FF;
+}
+.next-step-btn-1
+{
+    width: 160px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #02295A;
+    color:white;
+    font-family: 'ubuntu-regular';
+    font-size: 18px;
+    transition: all 100ms ease-in-out;
+}
+.next-step-btn-1:hover
+{
+    background-color: #184e90;
+}
+.plan-switch p
+{
+    font-family: 'ubuntu-regular';
+}
+.plan-footer 
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.go-back 
+{
+    font-family: 'ubuntu-medium';
+    text-decoration: none;
+    color:gray;
+}
