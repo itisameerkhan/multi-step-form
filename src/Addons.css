@@ -1,0 +1,78 @@
+
+.addons-header h1 
+{
+    font-family: 'ubuntu-bold';
+    color:#02295A;
+    padding:0;
+    margin:30px 0 15px 0;
+}
+.addons-header p 
+{
+    padding:0;
+    margin:0;
+    font-family: 'ubuntu-regular';
+    color:gray;
+}
+.addons-checklist 
+{
+    display: flex;
+    border:1px solid #D6D9E6;
+    width: 92%;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+    transition: all 100ms ease-in-out;
+}
+.addons-checklist:hover 
+{
+    border: 1px solid  hsl(243, 100%, 62%);;
+}
+.addons-checklist h2 
+{
+    font-family: 'ubuntu-medium';
+    color:#02295A;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+}
+.addons-checklist p 
+{
+    font-family: 'ubuntu-regular';
+    color:gray;
+    padding:10px 0 0 0;
+    margin:0;
+}
+.add-div 
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.addons-checklist h4 
+{
+    font-family: 'ubuntu-regular';
+    color:hsl(243, 100%, 62%);
+}
+.addons-main
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+.addons-checked 
+{
+    border:1px solid hsl(243, 100%, 62%);;
+    background-color:#F0F6FF;;
+}
+.addons-footer 
+{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
