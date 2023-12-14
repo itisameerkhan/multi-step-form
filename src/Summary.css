@@ -1,0 +1,97 @@
+.summary-header h1
+{
+    font-family: 'ubuntu-bold';
+    color:#02295a;
+    padding:0;
+    margin:30px 0 0 0;
+}
+.summary
+{
+    width: 95%;
+}
+.summary-header p 
+{
+    font-family: 'ubuntu-regular';
+    color:gray;
+    padding:15px 0;
+    margin: 0;
+}
+.summary-main
+{
+    padding:30px 20px;
+    background-color: #F0F6FF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+.summary-main-inner h2 
+{
+    font-family: 'ubuntu-regular';
+    font-size: 20px;
+    color:#02295a;
+    padding:0;
+    margin:10px 0;
+}
+.summary-main-inner a 
+{
+    color:gray;
+    font-family: 'ubuntu-regular';
+    font-size: 15px;
+    padding:0;
+    margin:0;
+}
+.summary-main h4
+{
+    font-family: 'ubuntu-medium';
+    color:#02295a;
+}
+.summary-main-down
+{
+    background-color: #F0F6FF;
+    padding: 0;
+    padding:10px 20px;
+}   
+.summary-addon
+{
+    display: flex;
+    justify-content: space-between;
+}
+.summary-addon-p1 
+{
+    color:gray;
+    font-family: 'ubuntu-regular';
+    font-size: 17px;
+}
+.summary-addon-p2 
+{
+    color: #02295a;
+    font-family: 'ubuntu-medium';
+    font-size: 17px;
+}
+.summary-result
+{
+    display: flex;
+    justify-content: space-between;
+}
+.summary-result .result
+{
+    padding:5px 20px;
+    font-family: 'ubuntu-regular';
+    color:gray;
+}
+.total 
+{
+    padding:5px 20px;
+    font-family: 'ubuntu-regular';
+    color: #473DFF;
+    font-size: 20px;
+}
+.summary-footer 
+{
+    display: flex;
+    align-items: center;
+    width: 97%;
+    padding:20px;
+    justify-content: space-between;
+}

@@ -10,9 +10,28 @@ const Addons = () => {
         const list = [...checked];
         list[index] = !list[index];
         setChecked(list);
-        localStorage.removeItem('checkbox');
         localStorage.setItem('checkbox', JSON.stringify(list));
     }
+
+    const price = localStorage.getItem('price');
+
+    localStorage.removeItem('addons');
+    const addonsData = [];
+
+    if(checked[0] === true) {
+        if(price === 'true') addonsData.push(['Online service', '$10/yr',10]);
+        else addonsData.push(['Online service', '$1/mo',1]);
+    }
+    if(checked[1] === true) {
+        if(price === 'true') addonsData.push(['Larger Storage', '$20/yr',20]);
+        else addonsData.push(['Larger Storage', '$2/mo',2]);
+    }
+    if(checked[2] === true) {
+        if(price === 'true') addonsData.push(['Customizable profile', '$20/yr',20]);
+        else addonsData.push(['Customizable profile', '$2/mo',2]);
+    }
+
+    localStorage.setItem('addons', JSON.stringify(addonsData))
 
     return (
         <div className="add-ons">
@@ -31,7 +50,7 @@ const Addons = () => {
                             <p>Access to multiplayer game</p>
                         </div>
                     </div>
-                    <h4>+$1/mo</h4>
+                    <h4>{price === 'true' ? '$10/yr' : '+$1/mo'}</h4>
                 </div>
                 <div   
                     className={`addons-checklist ${checked[1] ? 'addons-checked' : 'none'}`}
@@ -43,7 +62,7 @@ const Addons = () => {
                             <p>Extra 1TB of cloud service</p>
                         </div>
                     </div>
-                    <h4>+$2/mo</h4>
+                    <h4>{price === 'true' ? '$20/yr' : '+$2/mo'}</h4>
                 </div>
                 <div   
                     className={`addons-checklist ${checked[2] ? 'addons-checked' : 'none'}`}
@@ -55,7 +74,7 @@ const Addons = () => {
                             <p>Custom theme on your profile</p>
                         </div>
                     </div>
-                    <h4>+$2/mo</h4>
+                    <h4>{price === 'true' ? '$20/yr' : '+$2/mo'}</h4>
                 </div>
             </div>
             <div className="addons-footer">

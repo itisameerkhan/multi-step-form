@@ -6,6 +6,7 @@ import Summary from './Summary'
 import './assets/images/bg-sidebar-desktop.svg'
 import { NavLink } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Confirm from './Confirm';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
                   <Route path='/select-plan' element={<Plan  />} />
                   <Route path='/add-ons' element={<Addons />} />
                   <Route path='/summary' element={<Summary />} />
+                  <Route path='/Confirm' element={<Confirm />} />
               </Routes>
             </div>
         </div>

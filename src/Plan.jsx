@@ -8,6 +8,21 @@ const Plan = () => {
     const [option, setOption] = useState(localStorage.getItem('option') || 1);
     const [price, setPrice] = useState(true);
 
+    if(option === 1) {
+        if(price) localStorage.setItem('plan', JSON.stringify(['Arcade (Yearly)', "$90/yr",90]));
+        else localStorage.setItem('plan', JSON.stringify(['Arcade (Monthly)', '$9/mo',9]));
+    }
+    if(option === 2) {
+        if(price) localStorage.setItem('plan',  JSON.stringify(['Advanced (Yearly)', '$120/yr',120]));
+        else localStorage.setItem('plan', JSON.stringify(['Advanced (Monthly)', '$12/mo',12]));
+    }
+    if(option === 3) {
+        if(price) localStorage.setItem('plan',  JSON.stringify(['Pro (Yearly)', '$150/yr',150]));
+        else localStorage.setItem('plan', JSON.stringify(['Pro (Monthly)', '$15/mo',15]));
+    }
+
+    localStorage.setItem('price', price);
+
     return (
         <div className="plan-container">
             <div className="title">

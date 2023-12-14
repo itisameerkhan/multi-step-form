@@ -1,0 +1,25 @@
+.confirm
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+}
+.confirm img 
+{
+    height: 100px;
+    width: 100px;
+}
+.confirm h1 
+{
+    font-family: 'ubuntu-medium';
+    color:#02295A;
+}
+.confirm p
+{
+    font-family: 'ubuntu-regular';
+    color:gray;
+    text-align: center;
+}
