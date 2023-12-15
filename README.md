@@ -80,14 +80,42 @@ Your users should be able to:
 
 ## **Built With**
 
- ![React](https://img.shields.io/badge/React%20-%231572B6.svg?style=for-the-badge&logo=react&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) &nbsp; ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) &nbsp; ![JavaScript](https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
-
-
+ <p align="left">
+   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=html" />
+  </a>
+   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=css" />
+  </a>
+  <a href="https://mui.com" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=mui" />
+   </a>
+   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=js" />
+  </a>
+   <a href="https://react.dev" target="_blank" rel="noreferrer">
+    <img src="https://skillicons.dev/icons?i=react" />
+  </a>
+  </a>
+</p>
 <br>
 
 ## **Tools Used**
 
-![Google](https://img.shields.io/badge/google-DA4437?style=for-the-badge&logo=google&logoColor=white) &nbsp;  ![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E) &nbsp; ![Visual Studio Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) &nbsp; ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+<p align="left">
+    <a href="https://code.visualstudio.com" target="_blank" rel="noreferrer">
+      <img src="https://skillicons.dev/icons?i=vscode" />
+    </a>
+    <a href="https://www.figma.com" target="_blank" rel="noreferrer">
+      <img src="https://skillicons.dev/icons?i=figma" />
+    </a>
+    <a href="https://git-scm.com" target="_blank" rel="noreferrer">
+      <img src="https://skillicons.dev/icons?i=git" />
+    </a>
+    <a href="https://vercel.com/dashboard" target="_blank" rel="noreferrer">
+      <img src="https://skillicons.dev/icons?i=vercel" />
+    </a>
+</p>
 
 <br>
 
