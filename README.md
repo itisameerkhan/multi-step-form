@@ -41,7 +41,7 @@
 ## **Preview**
 
 <div align='center'>
-<img src='./design/desktop-preview.jpg' alt='Mutli step form'>
+  <img src='https://res.cloudinary.com/dz209s6jk/image/upload/v1676299213/Challenges/tn6hip0khjvu4qrhww7r.jpg' alt='Mutli step form'>
 </div>
 
 
