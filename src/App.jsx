@@ -3,7 +3,7 @@ import Info from './Info';
 import Plan from './Plan';
 import Addons from './Addons';
 import Summary from './Summary'
-import './assets/images/bg-sidebar-desktop.svg'
+import '/images/bg-sidebar-desktop.svg'
 import { NavLink } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Confirm from './Confirm';
