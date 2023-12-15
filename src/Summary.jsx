@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './Summary.css';
-import '../images/icon-thank-you.svg';
 
 const Summary = () => {
 

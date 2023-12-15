@@ -2,9 +2,9 @@ import { useState } from 'react';
 import './Plan.css';
 import Switch from './Component/Switch';
 import { Link } from 'react-router-dom';
-import '../images/icon-arcade.svg';
-import '../images/icon-advanced.svg';
-import '../images/icon-pro.svg';
+import Arcade from '../images/icon-arcade.svg';
+import Advanced from '../images/icon-advanced.svg';
+import Pro from  '../images/icon-pro.svg';
 
 const Plan = () => {
 
@@ -38,7 +38,7 @@ const Plan = () => {
                     setOption(1); 
                     localStorage.setItem('option', 1);
                 }} >   
-                    <img src="/images/icon-arcade.svg" alt="" />
+                    <img src={Arcade} alt="" />
                     <div className="price">
                         <h4>Arcade</h4>
                         <p>{price === true ? '$90/year' : '$9/mo'}</p>
@@ -50,7 +50,7 @@ const Plan = () => {
                     setOption(2); 
                     localStorage.setItem('option', 2);
                 }} >
-                    <img src="/images/icon-advanced.svg" alt="" />
+                    <img src={Advanced} alt="" />
                     <div className="price">
                         <h4>Advanced</h4>
                         <p>{price == true ? '$120/yr' : '$12/mo'}</p>
@@ -62,7 +62,7 @@ const Plan = () => {
                     setOption(3); 
                     localStorage.setItem('option', 3);
                 }} >
-                    <img src="/images/icon-pro.svg" alt="" />
+                    <img src={Pro} alt="" />
                     <div className="price">
                         <h4>Pro</h4>
                         <p>{price ? '$150/yr' : '$15/mo'}</p>
