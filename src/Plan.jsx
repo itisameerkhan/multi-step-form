@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './Plan.css';
 import Switch from './Component/Switch';
 import { Link } from 'react-router-dom';
+import '../images/icon-arcade.svg';
+import '../images/icon-advanced.svg';
+import '../images/icon-pro.svg';
 
 const Plan = () => {
 
